@@ -11,6 +11,6 @@ public class ChangeChar {
         // 输出完韩顺平教育后，光标回车到改行的第一个字，韩，然后将北京替换韩顺
         System.out.println("韩顺平教育\r北京");
         // 课堂练习
-        System.out.println("书名\t作者\t价格\t销量\n三国\t罗贯中\t120\t1000");
+        System.out.println("书名\t作者\t价格\t销量\n三国\t罗贯中\t120\t1000");     
     }
 }
