@@ -12,7 +12,6 @@ public class Var02 {
         System.out.println("年龄：" + age);
         System.out.println("性别：" + gender);
         System.out.println("成绩：" + score);
-
+        System.out.println("hello" + 123);
     }
-    
 }
