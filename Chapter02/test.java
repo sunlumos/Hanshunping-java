@@ -5,5 +5,7 @@ public class test{
         int a;
         a = 100;
         System.out.println(a);
+        int b = 800;
+        System.out.println(b);
     }
 }
