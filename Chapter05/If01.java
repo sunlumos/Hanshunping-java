@@ -2,8 +2,6 @@ package Chapter05;
 
 import java.util.Scanner;
 
-import javax.swing.plaf.synth.SynthSpinnerUI;
-
 public class If01 {
     public static void main(String[] args) {
         
