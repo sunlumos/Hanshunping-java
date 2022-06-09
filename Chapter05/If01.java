@@ -2,6 +2,8 @@ package Chapter05;
 
 import java.util.Scanner;
 
+import javax.swing.plaf.synth.SynthSpinnerUI;
+
 public class If01 {
     public static void main(String[] args) {
         
@@ -49,5 +51,31 @@ class IfTest {
             System.out.println(year + "不是闰年");
         } 
 
+    }
+}
+
+class IfTest01 {
+    public static void main(String[] args) {
+        Scanner myScanner = new Scanner(System.in);
+        System.out.println("请输入保国同志的芝麻信用分：");
+        int score = myScanner.nextInt();
+        // 先对输入的信用分范围进行有效判断
+        if (score >= 1 && score <= 100){
+            // 再进行常规的判断
+            if (score == 100){
+                System.out.println("信用极好");     
+            } else if (score > 80){
+                System.out.println("信用优秀");
+            } else if (score >= 60){
+                System.out.println("信用一般");
+            } else {
+                System.out.println("信用不及格");
+            }
+            
+        } else {
+            System.out.println("信用分异常，请重新输入");
+        }
+        
+        myScanner.close();
     }
 }
