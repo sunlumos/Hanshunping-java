@@ -23,7 +23,7 @@ public class NestedIf {
         } else {
             System.out.println("你被淘汰了");
         }
-        
+        myScanner.close();
     }
 }
 
