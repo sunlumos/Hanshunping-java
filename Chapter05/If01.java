@@ -10,8 +10,44 @@ public class If01 {
         int age = myScanner.nextInt();
         if(age >= 18) {
             System.out.println("成年了，需要为自己行为负责");
+        } else {
+            System.out.println("你年龄不大，放过你了");
         }
         // scanner.close()，调用scanner后，系统希望你最后进行关闭
         myScanner.close();
+    }
+}
+
+class IfTest {
+    public static void main(String[] args) {
+        // Q1
+        // double num1 = 13.45;
+        // double num2 = 15.22;
+        // if(num1 > 10.0){
+        //     if(num2 < 20.0){
+        //         System.out.println(num1 + num2);
+        //     }
+        // }
+
+        // Q2
+        // int num1 = 11;
+        // int num2 = 3;
+        // int sum = num1 + num2;
+        // if(sum % 3 == 0 && sum % 5 == 0){
+        //     System.out.println("他们可以同时被3和5整除");
+        // } else {
+        //     System.out.println("他们不满足条件");
+        // }
+
+        // Q3
+        int year = 2001;
+        if(year % 4 == 0 && year % 100 != 0 ){
+            System.out.println(year + "是闰年");
+        } else if(year % 400 == 0){
+            System.out.println(year + "是闰年");
+        }else {
+            System.out.println(year + "不是闰年");
+        } 
+
     }
 }
