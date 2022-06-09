@@ -16,6 +16,7 @@ public class Input {
         double sal = myScanner.nextDouble();
         System.out.println("个人信息如下：");
         System.out.println("姓名：" + name + "年龄：" + age + "薪水：" + sal);
+        myScanner.close();
 
     }
 }
