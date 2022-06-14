@@ -15,3 +15,36 @@ public class For01 {
          }
     }
 }
+
+class For01Ex01 {
+    public static void main(String[] args) {
+        // Q1
+        // 化繁为简：将复杂的需求拆解成简单的需求，逐步完成
+        // 先死后活：先考虑固定的值，然后转变为可变化的值
+        int count = 0;
+        int sum = 0;
+        // 设置start，end变量，用于更加灵活地进行后续功能扩展
+        // 更进一步，倍数也可以变成变量
+        int start = 1;
+        int end = 100;
+        int t = 9;
+        for(int i = start;i <= end; i++){
+            if(i % t == 0){
+                count ++;
+                sum += i;
+            }
+        }
+        System.out.println("一共有" + count + "个数，总和为" + sum);
+    }
+}
+
+class For01Ex02{
+    public static void main(String[] args) {
+        int i = 0;
+        int j = 5;
+        for(;i <=5 ;i++){
+            System.out.println(i + " + " + j + " = 5");
+            j--;
+        }
+    }
+}
