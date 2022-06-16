@@ -18,3 +18,7 @@ public class Array02 {
         myScanner.close();
     }
 }
+
+// !数组细节
+// 如果没有给数组元素赋值，则数值型的默认赋值为0，string类型为null，布尔为false
+// 数组下标必须在数组的范围里面使用，否则会报错：下标越界
