@@ -19,3 +19,18 @@ public class ArrayExer {
         }
     }
 }
+
+class ArrayExerQ2 {
+    public static void main(String[] args) {
+        int arr[] = {4, -1, 9, 10, 23, 11};
+        int max = arr[0];
+        int t = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (max < arr[i]) {
+                max = arr[i];
+                t = i;
+            }
+        }
+        System.out.println("数组最大值为：" + max + "，下标为：" + t);
+    }
+}
