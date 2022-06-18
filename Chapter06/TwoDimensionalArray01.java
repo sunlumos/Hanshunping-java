@@ -45,9 +45,3 @@ class TwoDimensionalArray02 {
         }
     }
 }
-
-class TwoDimensionalArray03 {
-    public static void main(String[] args) {
-        
-    }
-}
