@@ -58,3 +58,47 @@ class ChapterHomework4 {
     }
 }
 
+class ChapterHomework5 {
+    public static void main(String[] args) {
+        int arr[] = new int[10];
+        int sum = 0;
+        double ave = 0;
+        int maxIndex = 0;
+        int minIndex = 0;
+
+        // 随机生成一组数据
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = (int)(Math.random()*100);
+            sum += arr[i];
+        }
+        ave = sum / 10.0;
+
+        // 求最大值最小值的下标
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[minIndex] > arr[i]) {
+                minIndex = i;
+            }
+            if (arr[maxIndex] < arr[i]) {
+                maxIndex = i;
+            }
+            if (arr[i] == 8) {
+                System.out.println("数组中包含8！");
+            }
+        }
+
+        System.out.println("arr正序情况：");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + "\t");
+        }
+        System.out.println();
+
+        // 倒序打印
+        for (int i = arr.length - 1; i >= 0; i--) {
+            System.out.print(arr[i] + "\t");
+        }
+        System.out.println();
+        System.out.println("平均值为：" + ave);
+        System.out.println("最大值下标为：" + maxIndex);
+        System.out.println("最小值下标为：" + minIndex);
+    }
+}
