@@ -28,3 +28,26 @@ public class TwoDimensionalArray01 {
 
     }
 }
+
+class TwoDimensionalArray02 {
+    public static void main(String[] args) {
+        // 二维数组的动态初始化
+        int arr[][] = new int[2][3];
+// 也可以先声明，再使用：int arr[][];  arr = new int[2][3];
+        arr[1][1] = 8;
+
+        // 遍历arr
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {  
+                System.out.print(arr[i][j] + "\t");
+            }
+            System.out.println();// 每输出一行一维数组后进行换行
+        }
+    }
+}
+
+class TwoDimensionalArray03 {
+    public static void main(String[] args) {
+        
+    }
+}
