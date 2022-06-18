@@ -45,3 +45,57 @@ class TwoDimensionalArray02 {
         }
     }
 }
+
+class TwoDimensionalArray05 {
+    public static void main(String[] args) {
+        // todo 遍历输出二维数组,并求和
+        int arr[][] = {{4,6},{1,4,5,7},{-2}};
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                System.out.print(arr[i][j] + "\t");
+                sum += arr[i][j];
+            }
+            System.out.println();
+        }
+        System.out.println("总和为:" + sum);
+
+    }
+}
+
+class Yanghui {
+    public static void main(String[] args) {
+        //todo  打印十行杨辉三角
+        /*//! 规律
+          第一行有1个元素，第n行有n个元素
+          每一行的第一个元素和最后一个元素都是1
+          从第三行开始，对于非第一个元素和最后一个元素的元素值为
+          arr[i][j] = arr[i-1][j] + arr[i-2][j-1]
+         */
+        int arr[][] = new int[10][];  //先不给一维数组开辟空间
+
+        for (int i = 0; i < arr.length; i++) {
+            // 单独对一维数组分别开辟空间
+            arr[i] = new int[i + 1];
+
+            // 给每个一维数组进行赋值
+            for (int j = 0; j < arr[i].length; j++) {
+                //如果是arr[i][0]或者是arr[i][j],就等于1
+                if (j == 0 || i == j) {
+                    arr[i][j] = 1;
+                } else //如果不是第一个或者最后一个 
+                {
+                    arr[i][j] = arr[i-1][j] + arr[i-1][j-1];
+                }
+            }
+        }
+        // 打印
+        System.out.println("杨辉三角为：");
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                System.out.print(arr[i][j] + "\t");
+            }
+            System.out.println();
+        }
+    }
+}
