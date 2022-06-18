@@ -27,3 +27,34 @@ class ChapterHomework2 {
     }
 }
 
+class ChapterHomework4 {
+    public static void main(String[] args) {
+        int arr[] = {10,12,45,90};
+        int insert = 23;
+
+        // 创建新的数组，将老数组拷贝到新数组中
+        int arrNew[] = new int[5];
+        for (int i = 0; i < 4; i++) {
+            arrNew[i] = arr[i];
+        }
+
+        // 记录老数组中比要插入的数字小的下标
+        int flag = 0;
+        for (int i = 0; i < 4; i++) {
+            if (insert < arr[i]) {
+                flag = i;
+                break;
+            }
+        }
+
+        // 将该下标后面的数字全部后挪一位
+        for (int i = 4; i >= flag; i--) {
+            arrNew[i] = arrNew[i - 1];
+        }
+        arrNew[flag] = insert;
+        for (int i = 0; i < arrNew.length; i++) {
+            System.out.print(arrNew[i] + "\t");
+        }
+    }
+}
+
