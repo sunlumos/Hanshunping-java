@@ -102,3 +102,34 @@ class ChapterHomework5 {
         System.out.println("最小值下标为：" + minIndex);
     }
 }
+
+class ChapterHomework6 {
+    public static void main(String[] args) {
+        char[] arr1 = {'a','z','b','c'};
+        char[] arr2 = arr1;
+        arr1[2] = '韩';
+        for (int i = 0; i < arr2.length; i++) {
+            System.out.println(arr1[i] + "," + arr2[i]);
+        }
+    }
+}
+
+class ChapterHomework7 {
+    public static void main(String[] args) {
+        // 冒泡排序
+        int arr[] = {45,87,12,32,77};
+        int temp;
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + "\t");
+        }
+    }
+}
