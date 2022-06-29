@@ -28,9 +28,13 @@ a和b在swap的栈中完成了值的交换，但在主方法中不受影响
 // 因此main程序继续执行P.age的时候，指向10
         Person p = new Person();
         p.age = 10;
-        bb.test200(p);
-        System.out.println("p.age=" + p.age);
-
+        p.name = "jack";
+        // bb.test200(p);
+        // System.out.println("p.age=" + p.age);
+        Person q = bb.copyPerson(p);
+        System.out.println("q.name=" + q.name + "\tq.age=" + q.age);
+        // 判断p和q是否是同一个对象
+        System.out.println(p == q);
     }
 }
 
@@ -53,6 +57,14 @@ class B {
     public void test200(Person p){
         p = null;
     }
+
+    public Person copyPerson(Person p){
+        Person q = new Person();
+        q.age = p.age;
+        q.name = p.name; 
+        return q;  
+    }
+
 }
 
 class Person {
