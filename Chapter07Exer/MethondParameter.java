@@ -13,6 +13,24 @@ a和b在swap的栈中完成了值的交换，但在主方法中不受影响
         MethondParameterAA obj = new MethondParameterAA();
         obj.swap(a, b);
         System.out.println("a =" + a + "\tb = " + b);
+
+        //!引用对象是地址传递，数组，对象都是引用对象
+        // 对其进行修改是会影响原来的值的
+        int[] arr = {1,2,3};
+        B bb = new B();
+        bb.test100(arr);
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + "\t");
+        }
+
+// 方法中的p最后开始是指向main中的p的地址
+// 但当方法中的p=null后，方法中的p指向空，并不会影响main中的p的指向
+// 因此main程序继续执行P.age的时候，指向10
+        Person p = new Person();
+        p.age = 10;
+        bb.test200(p);
+        System.out.println("p.age=" + p.age);
+
     }
 }
 
@@ -25,4 +43,19 @@ class MethondParameterAA {
         System.out.println("交换后的值：a = " + a + ",b = " + b);
         
     }
+}
+
+class B {
+    public void test100(int[] arr){
+        arr[0] = 100;
+    }
+
+    public void test200(Person p){
+        p = null;
+    }
+}
+
+class Person {
+    String name;
+    int age;
 }
