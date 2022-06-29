@@ -1,4 +1,4 @@
-package Chapter07;
+package Chapter07Exer;
 
 public class MiGong {
     public static void main(String[] args) {
