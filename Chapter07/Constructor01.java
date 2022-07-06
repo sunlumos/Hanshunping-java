@@ -18,4 +18,24 @@ class Constructor01Person {
         name = pName;
         age = pAge;
     }
+
+    // 可以构建第二个构造器，名字还是得和类名一致
+    // 构造器是对象初始化，不是创建对象
+    public Constructor01Person(String pName){
+        name = pName;
+    }
+    
+}
+
+class Constructor01Dog {
+    // 如果程序员没有定义构造器，则会系统会自动生成一个无参构造器(默认构造器)
+    // 可以使用javap反编译
+    // Constructor01Dog(){
+
+    // }
+    // ! 一旦定义了自己的构造器，默认构造器就覆盖了，不能再使用默认构造器
+    // 除非显示的定义一下
+    Constructor01Dog(String dName){
+    }  
+    Constructor01Dog(){}
 }
