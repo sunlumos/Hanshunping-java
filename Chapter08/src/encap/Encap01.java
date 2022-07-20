@@ -8,6 +8,10 @@ public class Encap01 {
         person.setAge(300);
         person.setSalary(20000);
         System.out.println(person.info());
+
+        Person smith = new Person("smith", 200, 50000);
+        System.out.println(smith.getAge());
+
     }
 }
 
@@ -15,6 +19,17 @@ class Person {
     public String name;//名字公开
     private int age;//年龄私有化
     private double salary;//工资私有化
+
+    // 构造器
+    public Person (){}
+    // 有三个属性的构造器
+    public Person(String name, int age, double salary) {
+        // 我们可以将封装设置在构造器之中
+        setName(name);
+        setAge(age);
+        setSalary(salary);
+    }
+
 // 自己写封装太慢，直接生成
     public String getName() {
         return name;
