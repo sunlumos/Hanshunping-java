@@ -12,5 +12,5 @@ public class A {
     }
     void m2(){};
     protected void m3() {};
-    private void m4() {};
+    // private void m4() {};
 }
