@@ -10,4 +10,7 @@ public class A {
         // 在本类中，该方法可以访问四个属性
         System.out.println("n1 = " + n1 + " n2 = " + n2 + " n3 = " + n3 + " n4 = " + n4);
     }
+    void m2(){};
+    protected void m3() {};
+    private void m4() {};
 }
