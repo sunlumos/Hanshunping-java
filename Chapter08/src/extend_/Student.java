@@ -13,4 +13,9 @@ public class Student {
     public void showInfo() {
         System.out.println("学生名：" + name + " 年龄：" + age + " 成绩：" + score);
     }
+
+    // 父类构造器
+    public Student(String name){
+        System.out.println("父类有参构造器被调用");
+    }
 }
