@@ -4,6 +4,7 @@ public class Exercise01 {
     public static void main(String[] args) {
         // 1.调用的无参构造器
         B b = new B();
+        System.out.println(b);
     }
 }
 
