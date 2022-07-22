@@ -33,10 +33,10 @@ public class B extends A {
         // 提示：如果查找方法的过程中，找到了，但是不能访问， 则报错, cannot access
         //      如果查找方法的过程中，没有找到，则提示方法不存在
         //cal();
-        this.cal(); //等价 cal
+        this.cal(); //等价 cal() 查找本类中的cal()
 
         //找cal方法(super.call()) 的顺序是直接查找父类，其他的规则一样
-        //super.cal();
+        super.cal();
 
         //演示访问属性的规则
         //n1 和 this.n1 查找的规则是
@@ -49,13 +49,14 @@ public class B extends A {
         System.out.println(this.n1);
 
         //找n1 (super.n1) 的顺序是直接查找父类属性，其他的规则一样
+        // 因此找到了Base类中的n1
         System.out.println(super.n1);
 
     }
     //访问父类的方法，不能访问父类的private方法 super.方法名(参数列表);
     public void ok() {
         super.test100();
-        super.test200();
+        super.test200(); 
         super.test300();
         //super.test400();//不能访问父类private方法
     }
