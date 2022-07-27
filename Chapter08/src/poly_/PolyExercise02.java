@@ -5,9 +5,11 @@ public class PolyExercise02 {
         Sub s = new Sub();
         System.out.println(s.count);//20
         s.display();//20
+        // b的编译类型为Base,运行类型为Sub
         Base b = s;
         System.out.println(b == s);//T
         System.out.println(b.count);//10
+        // 运行方法的时候，从运行类型来开始查找方法
         b.display();//20
     }
 
