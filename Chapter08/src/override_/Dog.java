@@ -24,6 +24,7 @@ public class Dog extends Animal{
 //        return null;
 //    }
     //细节: 子类方法不能缩小父类方法的访问权限 【演示】
+    // 可以扩大其范围，父类的eat为protected,子类设置为public是可以的
     //public > protected > 默认>private
     public void eat() {
 
