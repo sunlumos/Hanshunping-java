@@ -30,7 +30,7 @@ public class Master {
 //    public void feed(Cat cat, Fish fish) {
 //        System.out.println("主人 " + name + " 给 " + cat.getName() + " 吃 " + fish.getName());
 //    }
-
+// !存在的问题
     //如果动物很多，食物很多
     //===> feed 方法很多，不利于管理和维护
     //Pig --> Rice
