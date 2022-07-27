@@ -14,10 +14,12 @@ public class PloyArray {
 
         //循环遍历多态数组，调用say
         for (int i = 0; i < persons.length; i++) {
-            //老师提示: person[i] 编译类型是 Person ,运行类型是是根据实际情况有JVM来判断
-            System.out.println(persons[i].say());//动态绑定机制
+            //老师提示: person[i] 编译类型是 Person ,运行类型是根据实际情况有JVM来判断
+            //动态绑定机制，对应的调用相应的类中的say方法
+            System.out.println(persons[i].say());
             //这里大家聪明. 使用 类型判断 + 向下转型.
-            if(persons[i]  instanceof  Student) {//判断person[i] 的运行类型是不是Student
+            //判断person[i] 的运行类型是不是Student，对应地调用类特有的方法
+            if(persons[i]  instanceof  Student) {
                 Student student = (Student)persons[i];//向下转型
                 student.study();
                 //小伙伴也可以使用一条语句 ((Student)persons[i]).study();
