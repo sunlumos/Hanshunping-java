@@ -45,6 +45,8 @@ class Monster {
                 '}';
     }
 
+    // 当对象要被回收的时候，jvm会自动调用finalize方法
+    // 当某个对象没有被任何引用的时候，JVM会进行回收
     @Override
     protected void finalize() throws Throwable {
         System.out.println("fin..");
