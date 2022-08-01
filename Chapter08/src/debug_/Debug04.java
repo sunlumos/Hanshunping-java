@@ -12,7 +12,7 @@ public class Debug04 {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + "\t");
         }
-
+// 不仅可以给自己的代码加断点，也可以给系统下断点
         System.out.println("hello100");
         System.out.println("hello200");
         System.out.println("hello300");
