@@ -46,6 +46,14 @@ public class SmallChangeSys {
                 case "2":
                     System.out.println("收益入账金额：");
                     money = scanner.nextDouble();
+
+                    // 收益金额校验 收益入账的金额应该大于0
+                    // 思路：从不正确的条件入手，校验都通过了，才执行后续代码
+                    if (money <= 0) {
+                        System.out.println("收益入账的金额应该大于0");
+                        break;
+                    }
+
                     // 入账，余额加money
                     balance += money;
                     
@@ -57,6 +65,13 @@ public class SmallChangeSys {
                 case "3":
                     System.out.println("消费金额：");
                     money = scanner.nextDouble();
+
+                    // 找出不正确的情况
+                    if (money < 0 || money > balance) {
+                        System.out.println("你的消费金额应该在0——" + balance);
+                      break;  
+                    }
+
                     // 范围校验
                     System.out.println("请输入消费说明：");
                     note = scanner.next();
@@ -64,7 +79,7 @@ public class SmallChangeSys {
 
                     date = new Date();// 获取当前日期
                     // 拼接到detail中
-                    detail += "\n" + note +"\t-" + money + "\t" + sdf.format(date) + "\t" + balance;
+                    detail += "\n" + note +"\t-"  + money + "\t" + sdf.format(date) + "\t" + balance;
                     break;
                 case "4":
                     String choice = "";
