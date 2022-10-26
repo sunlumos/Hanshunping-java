@@ -67,8 +67,19 @@ public class SmallChangeSys {
                     detail += "\n" + note +"\t-" + money + "\t" + sdf.format(date) + "\t" + balance;
                     break;
                 case "4":
-                    System.out.println("4 退出");
-                    loop = false;
+                    String choice = "";
+                    // 一段代码实现一个功能  除非用户输入y或者n，否则一直循环
+                    while (true) {
+                        System.out.println("您确定要退出吗？ y/n");
+                        choice = scanner.next();
+                        if ("y".equals(choice) || "n".equals(choice)) {
+                            break;
+                        }
+                    }
+                    if ("y".equals(choice)) {
+                        loop = false;
+                    }
+                    System.out.println("退出了零钱通");
                     break;
                     
                 default:
