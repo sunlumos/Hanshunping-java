@@ -44,10 +44,11 @@ public class SmallChangeSys {
                     balance += money;
                     
                     date = new Date();// 获取当前日期
+                    // 用于日期格式化
                     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
                     // 拼接到detail中
                     detail += "\n收益入账\t" + money + "\t" + sdf.format(date) + "\t" + balance;
-                    System.out.println(detail);
+                    
                     break;
                 case "3":
                     System.out.println("3 消费");
