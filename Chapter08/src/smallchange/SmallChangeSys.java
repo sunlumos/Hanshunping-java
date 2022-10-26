@@ -23,6 +23,12 @@ public class SmallChangeSys {
     double balance = 0;
     Date date = null;  //表示日期
 
+    // 4.完成消费  定义新变量，记录消费的原因
+    String note = "";
+    // 用于日期格式化
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+
+
         do{
 
             System.out.println("-----------零钱通菜单-----------");
@@ -44,14 +50,21 @@ public class SmallChangeSys {
                     balance += money;
                     
                     date = new Date();// 获取当前日期
-                    // 用于日期格式化
-                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
                     // 拼接到detail中
                     detail += "\n收益入账\t" + money + "\t" + sdf.format(date) + "\t" + balance;
                     
                     break;
                 case "3":
-                    System.out.println("3 消费");
+                    System.out.println("消费金额：");
+                    money = scanner.nextDouble();
+                    // 范围校验
+                    System.out.println("请输入消费说明：");
+                    note = scanner.next();
+                    balance -= money;
+
+                    date = new Date();// 获取当前日期
+                    // 拼接到detail中
+                    detail += "\n" + note +"\t-" + money + "\t" + sdf.format(date) + "\t" + balance;
                     break;
                 case "4":
                     System.out.println("4 退出");
